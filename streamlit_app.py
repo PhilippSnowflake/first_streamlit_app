@@ -17,7 +17,7 @@ my_fruit_df.set_index('Fruit', inplace = True)
 # Let's put a pick list here so they can pick the fruit they want to include 
 fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_df.index), ['Avocado', 'Pear'])
 
-fruits_to _show = my_fruit_df.loc[fruits_selected]
+fruits_to_show = my_fruit_df.loc[fruits_selected]
 
 # Display the table on the page.
-streamlit.dataframe(my_fruit_df)
+streamlit.dataframe(fruits_to_show)
